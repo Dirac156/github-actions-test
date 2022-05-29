@@ -9,9 +9,17 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: echo a string
-              run: eccho "Hello World"
+              run: echo "Hello World"
             - name: multiline script
             # pipe helps us execute multiple commands
               run: |
                 node -v
                 npm -v
+          
+          # other shell and language
+            - name: pyhton Commands
+              run: |
+                  import platform
+                  print(platform.processor())
+              shell: python
+      
