@@ -1,0 +1,17 @@
+name: Shell Commands
+
+on: [push]
+
+jobs:
+    # create jobs
+    run-shell-command:
+        # define os for the virtual machine
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo a string
+              run: echo "Hello World"
+            - name: multiline script
+            # pipe helps us execute multiple commands
+              run: |
+                node -v
+                npm -v
